@@ -33,33 +33,36 @@ jobs:
       - name: npm
         run: npm install
       
+      - name: info
+        run: ionic info
+        
 #       - name: typings
 #         run: npm install -g @ionic/app-scripts
         
 #       - name: Remove Android platform
 #         run: ionic cordova platform rm android
         
-      - name: Add Android platform
-        run: ionic cordova platform add android@latest
+#       - name: Add Android platform
+#         run: ionic cordova platform add android@latest
 
-      - name: Build Android Dev APK
-        run: ionic cordova build android
+#       - name: Build Android Dev APK
+#         run: ionic cordova build android
 
-      - name: Build Android Release APK
-        run: ionic cordova build android --release --prod
+#       - name: Build Android Release APK
+#         run: ionic cordova build android --release --prod
 
-      - name: Generate the Android App Bundle
-        working-directory: ./platforms/android/
-        run: ./gradlew bundle
+#       - name: Generate the Android App Bundle
+#         working-directory: ./platforms/android/
+#         run: ./gradlew bundle
 
-      - name: Upload dev APK
-        uses: actions/upload-artifact@v1
-        with:
-          name: app-dev
-          path: platforms/android/app/build/outputs/apk/debug/app-debug.apk
+#       - name: Upload dev APK
+#         uses: actions/upload-artifact@v1
+#         with:
+#           name: app-dev
+#           path: platforms/android/app/build/outputs/apk/debug/app-debug.apk
 
-      - name: Upload release bundle
-        uses: actions/upload-artifact@v1
-        with:
-          name: app-release
-          path: platforms/android/app/build/outputs/bundle/release/app.aab
+#       - name: Upload release bundle
+#         uses: actions/upload-artifact@v1
+#         with:
+#           name: app-release
+#           path: platforms/android/app/build/outputs/bundle/release/app.aab
