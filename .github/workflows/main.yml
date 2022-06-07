@@ -24,6 +24,9 @@ jobs:
       - name: Install Cordova
         run: npm install -g cordova
 
+      - name: Install Ionic
+        run: npm install -g @ionic/cli
+        
       - name: Plugins
         run: ionic cordova plugin add cordova-plugin-device
       - name: Plugins
@@ -35,8 +38,7 @@ jobs:
       - name: Plugins
         run: ionic cordova plugin add cordova-plugin-statusbar
 
-      - name: Install Ionic
-        run: npm install -g @ionic/cli
+
 
       - name: Install app dependencies
         run: npm install
