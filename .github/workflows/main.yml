@@ -24,6 +24,17 @@ jobs:
       - name: Install Cordova
         run: npm install -g cordova
 
+      - name: Plugins
+        run: cordova plugin add cordova-plugin-device
+      - name: Plugins
+        run: cordova plugin add cordova-plugin-ionic-keyboard
+      - name: Plugins
+        run: cordova plugin add cordova-plugin-ionic-webview
+      - name: Plugins
+        run: cordova plugin add cordova-plugin-splashscreen
+      - name: Plugins
+        run: cordova plugin add cordova-plugin-statusbar
+
       - name: Install Ionic
         run: npm install -g @ionic/cli
 
